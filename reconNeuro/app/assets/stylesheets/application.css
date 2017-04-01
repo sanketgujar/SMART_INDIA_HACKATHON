@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+  body{
+    background-image: url("/assets/images/bg_img.jpg");
+  }
+
+
+ #progress {
+   margin: 20px;
+   width: 400px;
+   height: 8px;
+   position: relative;
+ }

@@ -1,10 +1,14 @@
-
-<div id="progress">	</div>
+<h1> Object detection Application </h1>
 
 <%= form_for(@object_input, url: {action: "update"}, html: { multipart: true }) do %>
   <%= file_field(:object_input, :object1) %>
-
   <button>
     Submit
   </button>
 <% end %>
+<div id ="object_image">
+  <% if @object_input&.object1.present? %>
+    <%= image_tag @object_input.object1.url(:thumb) %>
+  <% end %>
+</div>
+<div id="progress">	</div>

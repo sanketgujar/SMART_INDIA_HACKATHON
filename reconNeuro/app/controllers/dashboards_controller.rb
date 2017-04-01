@@ -1,10 +1,10 @@
 class DashboardsController < ApplicationController
-    before_action :set_object_input
   def index
-    @object_input = Neuro.new
+    @object_input = Neuro.where(id: 1)
   end
 
   def update
+   @object_input = Neuro.where(id: 1)
    if @object_input.update(object_params)
      flash[:notice] = 'Image updated'
      redirect_to controller: 'dashboards', action: 'index'
@@ -14,8 +14,5 @@ class DashboardsController < ApplicationController
   private
   def object_params
     params.require(:object_input).permit(:object1)
-  end
-  def set_object_input
-    @object_input = Neuro.new
   end
 end
