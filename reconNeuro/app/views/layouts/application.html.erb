@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ReconNeuro</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ProgressBar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+      #progress {
+        margin: 20px;
+        width: 400px;
+        height: 8px;
+        position: relative;
+      }
+
+    </style>
+    <script src="../javascripts/progressbar.js"></script>
+    <script src="../javascripts/main.js"></script>
+
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

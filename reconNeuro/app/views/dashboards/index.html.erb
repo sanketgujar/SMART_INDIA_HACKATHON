@@ -1,0 +1,10 @@
+
+<div id="progress">	</div>
+
+<%= form_for(@object_input, url: {action: "update"}, html: { multipart: true }) do %>
+  <%= file_field(:object_input, :object1) %>
+
+  <button>
+    Submit
+  </button>
+<% end %>
